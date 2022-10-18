@@ -1,0 +1,73 @@
+.logo{
+    width: 80px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: rgb(247, 247, 247);
+    position: sticky;
+    font-size: larger;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+.navbar li a{
+    text-decoration: none;
+    color: black;
+}
+#tentangkami h1{
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.dividetext{
+    text-align: justify;
+    line-height: 35px;
+    -webkit-columns: 250px 2;
+    -moz-columns: 250px 2;
+    columns: 250px 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    font-size: larger;
+    padding: 90px 70px;
+    background-color: rgb(247, 247, 247);
+}
+
+#jenismobil{
+    padding: 30px 90px;
+    background-color: rgb(247, 247, 247) ;
+
+}
+#jenismobil h1 {
+    display: flex;
+    justify-content: center;
+}
+#registrasi{
+    padding: 30px 480px;
+}
+#registrasi h1{
+    display: flex;
+    justify-content: center;
+}
+#tombol{
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    border-color: blue;
+}
+#footer{
+    padding: 15px;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+}
