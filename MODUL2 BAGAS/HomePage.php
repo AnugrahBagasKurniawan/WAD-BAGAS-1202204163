@@ -81,7 +81,7 @@
               <small class="text-muted">Manual</small>
             </div>
             <div class="card-footer">
-              <button type="button" class="btn btn-primary btn-sm">Book Now</button>
+              <a href="Booking.php?img=<?= $daftarmobil[0]["img"];?>" class="btn btn-primary">Book Now</a>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@
               <small class="text-muted">Manual</small>
             </div>
             <div class="card-footer">
-              <button type="button" class="btn btn-primary btn-sm">Book Now</button>
+              <a href="Booking.php?img=<?= $daftarmobil[1]["img"];?>" class="btn btn-primary">Book Now</a>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
               <small class="text-muted">Automatic</small>
             </div>
             <div class="card-footer">
-              <button type="button" class="btn btn-primary btn-sm">Book Now</button>
+              <a href="Booking.php?img=<?= $daftarmobil[2]["img"];?>" class="btn btn-primary">Book Now</a>
             </div>
           </div>
         </div>

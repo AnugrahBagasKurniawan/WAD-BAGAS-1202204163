@@ -57,14 +57,13 @@
     $mobil = $_POST['mobil'];
     $telepon = $_POST['telepon'];
 
-    if ($mobil == "Toyota Rush"){
+    if ($mobil == "1"){
         $harga = 200000;
-    } elseif ($mobil == "Daihatsu Ayla"){
-        $harga = 150000;
-    }else{
+    } else{
         $harga = 150000;
     }
 
+    $harga = $harga*$durasi;
     ?>
     
     <div>

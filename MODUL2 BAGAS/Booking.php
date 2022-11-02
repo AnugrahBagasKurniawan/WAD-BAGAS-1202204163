@@ -37,7 +37,25 @@
   .card-footer{
     text-align: center;
   }
+  .bagidua{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+  .bagidua img{
+    width: 50%;
+  }
 </style>
+    <?php
+    $daftarmobil = [
+        ["mobil"=>"Toyota Rush", "harga"=>"200.000","img"=>"https://www.toyota.astra.co.id/sites/default/files/2021-08/1-white.png"],
+        ["mobil"=>"Daihatsu Ayla", "harga"=>"150.000","img"=>"https://kadekbalicarrental.com/uploads/images/cars/slider/551259_new-ayla.png"],
+        ["mobil"=>"Honda Brio", "harga"=>"150.000","img"=>"https://asset.honda-indonesia.com/variants/images/Vos4HUL6XFLHnM2dhTzGbzdNHpvNTnBNBKhZwxc0.png"],
+        
+    ]
+    ?>
+
 <body>
     <div class="header">
         <ul class="navbar">
@@ -48,41 +66,53 @@
     <div class="teks1">
         <h4>RENT YOUR CAR NOW</h4>
     </div>
-    <div>
-        <form action="MyBooking.php" method="POST">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nama">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Book Date</label>
-                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="tanggal">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Start Time</label>
-                <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="" name="jam">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Duration(Days)</label>
-                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" name="durasi">
-            </div>
-            <div>
-                <label for="pilihmobil">Car Type</label>
-                <select class="form-select" aria-label="Default select example" id="pilihmobil" name="mobil">
-                    <option selected>Pilih Mobil</option>
-                    <option value="1">Toyota Rush</option>
-                    <option value="2">Daihatsu Ayla</option>
-                    <option value="3">Honda Brio</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" min="0" name="telepon">
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary" style="margin-top: 10px">Book</button>
-            </div>
-        </form>
+    <div class="bagidua">
+        <div>
+            <?php
+                if (isset($_GET["img"])) {
+                ?><img class="" width="100%" src="<?= $_GET["img"]; ?>" alt="">
+                <?php
+                } else {
+                ?><img width="100%" src="<?php echo $daftarmobil[0]["img"]?>" alt="">
+                <?php } 
+            ?>
+        </div>
+        <div class="container">
+            <form action="MyBooking.php" method="POST">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nama">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Book Date</label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="tanggal">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Start Time</label>
+                    <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="" name="jam">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Duration(Days)</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" name="durasi">
+                </div>
+                <div>
+                    <label for="pilihmobil">Car Type</label>
+                    <select class="form-select" aria-label="Default select example" id="pilihmobil" name="mobil">
+                        <option selected>Pilih Mobil</option>
+                        <option value="1">Toyota Rush</option>
+                        <option value="2">Daihatsu Ayla</option>
+                        <option value="3">Honda Brio</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" min="0" name="telepon">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px">Book</button>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="card-footer">
     Created By AnugrahBagasKurniawan_1202204163
