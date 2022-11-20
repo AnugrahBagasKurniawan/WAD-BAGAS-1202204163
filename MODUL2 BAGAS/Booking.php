@@ -44,7 +44,7 @@
 
   }
   .bagidua img{
-    width: 50%;
+    width: 100%;
   }
 </style>
     <?php
@@ -73,7 +73,7 @@
                 ?><img class="" width="100%" src="<?= $_GET["img"]; ?>" alt="">
                 <?php
                 } else {
-                ?><img width="100%" src="<?php echo $daftarmobil[0]["img"]?>" alt="">
+                ?><img width="100%" src="<?php echo $daftarmobil[2]["img"]?>" alt="">
                 <?php } 
             ?>
         </div>
@@ -107,6 +107,27 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
                     <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" min="0" name="telepon">
+                </div>
+                <div class="services">
+                    Add Service(s)
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Health Protocol" id="flexCheckDefault" name="health">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Health Protocol :
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Driver" id="flexCheckDefault" name="driver">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Driver :
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="fuel filled" id="flexCheckDefault" name="fuel">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Fuel Filled :
+                        </label>
+                    </div>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary" style="margin-top: 10px">Book</button>

@@ -56,6 +56,10 @@
     $durasi = $_POST['durasi'];
     $mobil = $_POST['mobil'];
     $telepon = $_POST['telepon'];
+    $health = $_POST['health'];
+    $driver = $_POST['driver'];
+    $fuel = $_POST['fuel'];
+    $total = $_POST['total'];
 
     if ($mobil == "1"){
         $harga = 200000;
@@ -63,7 +67,18 @@
         $harga = 150000;
     }
 
+    if(isset($_POST["health"])){
+        $total += 25000;
+    }
+    if(isset($_POST["driver"])) {
+        $total += 100000;
+    }
+    if(isset($_POST["fuel"])) {
+        $total += 250000;
+    }
+
     $harga = $harga*$durasi;
+    $total += $harga;
     ?>
     
     <div>
@@ -77,6 +92,7 @@
                 <th scope="col">Car Type</th>
                 <th scope="col">Phone Number</th>
                 <th scope="col">Harga</th>
+                <th scope="col">Total</th>
             </tr>
         </thead>
         <tbody>
@@ -88,11 +104,12 @@
                 <td><?php echo $mobil?></td>
                 <td><?php echo $telepon?></td>
                 <td><?php echo $harga?></td>
+                <td><?php echo $total?></td>
             </tr>
         </tbody>
     </div>
     <div class="text-center">
-        <button type="submit" class="btn btn-primary" style="margin-top: 10px"><a href="HomePage.php">Kembali</a></button>
+        <a href="HomePage.php"><button type="submit" class="btn btn-primary" style="margin-top: 10px">Kembali</button></a>
     </div>
     <div class="card-footer">
     Created By AnugrahBagasKurniawan_1202204163
