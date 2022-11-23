@@ -80,7 +80,7 @@ if(isset($_POST["submit"])) {
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault1" value="Lunas"
-                    <?php if($lstcar["status_pembayaran"] === 'Lunas') :?>
+                    <?php if($lstcar["status_pembayaran"] == 'Lunas') :?>
                         checked;
                         <?php endif ?>
                     >
@@ -90,7 +90,7 @@ if(isset($_POST["submit"])) {
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault2" value="Belum Lunas"
-                    <?php if($lstcar["status_pembayaran"] === 'Belum Lunas') :?>
+                    <?php if($lstcar["status_pembayaran"] == 'Belum Lunas') :?>
                         checked;
                         <?php endif ?>
                     >

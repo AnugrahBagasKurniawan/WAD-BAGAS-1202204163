@@ -75,13 +75,15 @@ if(isset($_POST["submit"])) {
                     <input class="form-control" type="file" id="formFile" name="foto_mobil">
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault1" value="Lunas"
+                    >
                     <label class="form-check-label" for="flexRadioDefault1">
                         Lunas
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault2" value="Belum Lunas"
+                    >
                     <label class="form-check-label" for="flexRadioDefault2">
                         Belum Lunas
                     </label>

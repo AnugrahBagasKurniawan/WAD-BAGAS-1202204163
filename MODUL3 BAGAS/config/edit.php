@@ -36,7 +36,7 @@
         tanggal_beli = '$tanggal_beli',
         deskripsi = '$deskripsi',
         foto_mobil = '$foto_mobil',
-        status_pembayaran = '$status_pembayaran'
+        status_pembayaran = 'Lunas'
 
         WHERE id_mobil = $id_mobil
         ";
