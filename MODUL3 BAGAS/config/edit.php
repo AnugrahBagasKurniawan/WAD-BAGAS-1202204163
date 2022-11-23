@@ -19,6 +19,7 @@
     $merk_mobil = $data["merk_mobil"];
     $tanggal_beli = $data["tanggal_beli"];
     $deskripsi = $data["deskripsi"];
+    $status_pembayaran = $data["status_pembayaran"];
     
     $foto_mobil = upload();
     if(!$foto_mobil) {
@@ -34,7 +35,8 @@
         merk_mobil = '$merk_mobil',
         tanggal_beli = '$tanggal_beli',
         deskripsi = '$deskripsi',
-        foto_mobil = '$foto_mobil'
+        foto_mobil = '$foto_mobil',
+        status_pembayaran = '$status_pembayaran'
 
         WHERE id_mobil = $id_mobil
         ";

@@ -7,6 +7,7 @@ function tambah($data) {
     $merk_mobil = $data["merk_mobil"];
     $tanggal_beli = $data["tanggal_beli"];
     $deskripsi = $data["deskripsi"];
+    $status_pembayaran = $data["status_pembayaran"];
     
     $foto_mobil = upload();
     if(!$foto_mobil) {

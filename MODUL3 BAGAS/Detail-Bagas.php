@@ -50,14 +50,6 @@ if(isset($_POST["submit"])) {
         </div>
     </section>
     <div class="container">
-            <?php
-            if (isset($_GET["foto_mobil"])) {
-                ?><img class="" width="100%" src="<?= $_GET["foto_mobil"]; ?>" alt="">
-                <?php
-                } else {
-                ?><img width="100%" src="<?php echo $daftarmobil[2]["foto_mobil"]?>" alt="">
-                <?php } 
-            ?>
         <h2>Tambah Mobil</h2>
         <p>Tambah Mobil Baru Anda Ke List Show Room</p>
             <form action="" method="POST" enctype="multipart/form-data">
@@ -85,6 +77,26 @@ if(isset($_POST["submit"])) {
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
                     <input class="form-control" type="file" id="formFile" name="foto_mobil" value="">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault1" value="Lunas"
+                    <?php if($lstcar["status_pembayaran"] === 'Lunas') :?>
+                        checked;
+                        <?php endif ?>
+                    >
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Lunas
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status_pembayaran" id="flexRadioDefault2" value="Belum Lunas"
+                    <?php if($lstcar["status_pembayaran"] === 'Belum Lunas') :?>
+                        checked;
+                        <?php endif ?>
+                    >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Belum Lunas
+                    </label>
                 </div>
                 <div class="mb-3">
                     <button type="submit" name="submit">Tambah Data</button>
