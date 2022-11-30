@@ -22,7 +22,7 @@
   if(isset($_POST["login"])) {
     if(login($_POST) > 0)  {
         echo "<script>
-                alert('Registrasi Berhasil')
+                alert('Login Berhasil')
             </script>
         ";
     } else{

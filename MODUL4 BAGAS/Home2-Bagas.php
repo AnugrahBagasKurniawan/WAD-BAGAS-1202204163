@@ -11,6 +11,7 @@
 </head>
 <?php 
  require 'config/function.php';
+ $hasil = query("SELECT * FROM user_bagas");
 
 
 ?>
@@ -24,7 +25,7 @@
         </div>
         <div class="row justify-content-evenly">
             <div class="col">
-                <a href=""><button type="button" class="btn btn-light">Add Car</button></a>
+                <a href="Add-Bagas.php"><button type="button" class="btn btn-light">Add Car</button></a>
             </div>
             <div class="col">
                 <div class="dropdown">
@@ -32,7 +33,7 @@
                         nama
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="DetailProfile-Bagas.php">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
                 </div>
