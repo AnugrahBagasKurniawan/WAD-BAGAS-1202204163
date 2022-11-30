@@ -15,7 +15,7 @@ function login($data) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $result = mysqli_query($conn, "SELECT * FROM user_bagas WHERE email = '$email'");
+    $result = mysqli_query($conn, "SELECT * FROM user_bagas WHERE email = '$emaill'");
 
     if( mysqli_num_rows($result) === 1) {
 

@@ -9,7 +9,7 @@ function daftar($data){
     $password = mysqli_real_escape_string($conn, $data["password"]);
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
 
-    $result = mysqli_query($conn, "SELECT email FROM user_bagas WHERE email = '$email'");
+    $result = mysqli_query($conn, "SELECT email FROM user_bagas WHERE email_user = '$email'");
 
     if(mysqli_fetch_assoc($result)) {
         echo "<script>
