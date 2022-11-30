@@ -19,7 +19,7 @@
   <?php 
   require 'config/login.php';
   $hasil = query("SELECT * FROM user_bagas");
-  if(!isset($_POST["login"])) {
+  if(isset($_POST["login"])) {
     if(login($_POST) > 0)  {
         echo "<script>
                 alert('Login Berhasil')
