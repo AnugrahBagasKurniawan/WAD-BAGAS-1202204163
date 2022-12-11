@@ -14,37 +14,14 @@
     }
     .konten{
         padding: 50px;
-    } 
+    }
   </style>
   <?php 
-  session_start();
-  require 'config/login.php';
-  //cek cookie
-  if (isset($_COOKIE['id']) && isset($_COOKIE['nama'])) {
-    $id = $_COOKIE['id'];
-    $nama = $_COOKIE['nama'];
-
-    $result = mysqli_query($conn, "SELECT nama FROM user_bagas WHERE id=$id" );
-    $row = mysqli_fetch_assoc($result);
-
-    if($nama === $row['nama']) {
-        $_SESSION['nama'] = $nama;
-        $_SESSION['login'] =true;
-    }
-
-  }
-  if (isset($_SESSION["login"])) {
-      $_SESSION['nama'] = $nama;
-      $_SESSION['id'] = $id;
-      header("Location: Home2-Bagas.php");
-      exit;
-  }
-
-  $hasil = query("SELECT * FROM user_bagas");
-  if(isset($_POST["login"])) {
-    if(login($_POST) > 0)  {
+  require 'config/daftar.php';
+  if(isset($_POST["daftar"])) {
+    if(daftar($_POST) > 0)  {
         echo "<script>
-                alert('Login Berhasil')
+                alert('Registrasi Berhasil')
             </script>
         ";
     } else{
@@ -59,29 +36,36 @@
         </div>
         <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
             <div class="konten">
-                <h2>Login</h2>
+                <h2>Registrasi</h2>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Username</label>
+                        <label for="exampleFormControlInput1" class="form-label">Nama </label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" name="nama">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Kata Sandi</label>
                         <input type="password" class="form-control" id="exampleFormControlInput1"  name="password">
                     </div>
-                    <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="remember">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Ingat Saya
-                            </label>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Kata Sandi</label>
+                        <input type="password" class="form-control" id="exampleFormControlInput1"  name="password2">
                     </div>
                     <div class="mb-3">
-                        <a href=""></a><button type="submit" class="btn btn-primary" name="login">Login</button>
+                        <label for="exampleFormControlInput1" class="form-label">Nomor Handphone</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1"  name="No_hp">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary" name="daftar">Daftar</button>
                     </div>
                 </form>
-                <p>Anda Belum punya akun?<a href="Registrasi.php">Daftar</a></p>
+                <p>Anda sudah punya akun?<a href="Login-Bagas.php">Login</a></p>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
+</html>

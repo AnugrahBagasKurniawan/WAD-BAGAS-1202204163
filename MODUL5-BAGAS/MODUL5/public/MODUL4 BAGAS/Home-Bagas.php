@@ -9,21 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha3tg84-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<?php 
-require 'config/login.php';
-$hasil = query("SELECT * FROM user_bagas");
-session_start();
-
-if (!isset($_SESSION["login"])){
-    $_SESSION['nama'] = $nama;
-    $_SESSION['id'] = $id;
-    header("Location: Login-Bagas.php");
-    exit;
-}
-
-
-
-?>
 <body>
     <section id="header">
         <div class="">
@@ -32,21 +17,8 @@ if (!isset($_SESSION["login"])){
                 <li><a href="ListCar-Bagas.php">MyCar</a></li>
             </ul>
         </div>
-        <div class="row justify-content-evenly">
-            <div class="col">
-                <a href="Add-Bagas.php"><button type="button" class="btn btn-light">Add Car</button></a>
-            </div>
-            <div class="col">
-                <div class="dropdown">
-                    <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo $_SESSION['nama']?>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="DetailProfile-Bagas.php?id=<?= $_SESSION["id"]?>">Profile</a></li>
-                        <li><a class="dropdown-item" href="config/logout.php">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="kanan">
+            <a href="Login-Bagas.php" style="color: white; text-decoration: none;">Login</a>
         </div>
     </section>
     <section id="bagidua">
